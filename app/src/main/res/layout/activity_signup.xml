@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_clean_background"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
+
+        <!-- Login text at top -->
+        <TextView
+            android:id="@+id/tvLoginHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="@color/login_text_medium"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="60dp" />
+
+        <!-- Sign Up Title -->
+        <TextView
+            android:id="@+id/tvSignUpTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@color/login_text_dark"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvLoginHint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp" />
+
+        <!-- Nom Input Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="50dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/tvSignUpTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNom"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Nom"
+                android:inputType="textPersonName"
+                android:textColor="@color/login_text_dark"
+                android:textColorHint="@color/login_text_medium"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Nom underline -->
+        <View
+            android:id="@+id/vNomUnderline"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/login_text_medium"
+            app:layout_constraintTop_toBottomOf="@id/tilNom"
+            app:layout_constraintStart_toStartOf="@id/tilNom"
+            app:layout_constraintEnd_toEndOf="@id/tilNom" />
+
+        <!-- Nom Error -->
+        <TextView
+            android:id="@+id/tvNomError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fitness_error"
+            android:textSize="12sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/vNomUnderline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Prenom Input Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPrenom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="25dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/tvNomError"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPrenom"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Prénom"
+                android:inputType="textPersonName"
+                android:textColor="@color/login_text_dark"
+                android:textColorHint="@color/login_text_medium"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Prenom underline -->
+        <View
+            android:id="@+id/vPrenomUnderline"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/login_text_medium"
+            app:layout_constraintTop_toBottomOf="@id/tilPrenom"
+            app:layout_constraintStart_toStartOf="@id/tilPrenom"
+            app:layout_constraintEnd_toEndOf="@id/tilPrenom" />
+
+        <!-- Prenom Error -->
+        <TextView
+            android:id="@+id/tvPrenomError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fitness_error"
+            android:textSize="12sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/vPrenomUnderline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Phone Input Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="25dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/tvPrenomError"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Téléphone"
+                android:inputType="phone"
+                android:textColor="@color/login_text_dark"
+                android:textColorHint="@color/login_text_medium"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone underline -->
+        <View
+            android:id="@+id/vPhoneUnderline"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/login_text_medium"
+            app:layout_constraintTop_toBottomOf="@id/tilPhone"
+            app:layout_constraintStart_toStartOf="@id/tilPhone"
+            app:layout_constraintEnd_toEndOf="@id/tilPhone" />
+
+        <!-- Phone Error -->
+        <TextView
+            android:id="@+id/tvPhoneError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fitness_error"
+            android:textSize="12sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/vPhoneUnderline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Email Input Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="25dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/tvPhoneError"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/login_text_dark"
+                android:textColorHint="@color/login_text_medium"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Email underline -->
+        <View
+            android:id="@+id/vEmailUnderline"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/login_text_medium"
+            app:layout_constraintTop_toBottomOf="@id/tilEmail"
+            app:layout_constraintStart_toStartOf="@id/tilEmail"
+            app:layout_constraintEnd_toEndOf="@id/tilEmail" />
+
+        <!-- Email Error -->
+        <TextView
+            android:id="@+id/tvEmailError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fitness_error"
+            android:textSize="12sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/vEmailUnderline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Password Input Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="25dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/login_text_medium"
+            app:layout_constraintTop_toBottomOf="@id/tvEmailError"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Mot de passe"
+                android:inputType="textPassword"
+                android:textColor="@color/login_text_dark"
+                android:textColorHint="@color/login_text_medium"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password underline -->
+        <View
+            android:id="@+id/vPasswordUnderline"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/login_text_medium"
+            app:layout_constraintTop_toBottomOf="@id/tilPassword"
+            app:layout_constraintStart_toStartOf="@id/tilPassword"
+            app:layout_constraintEnd_toEndOf="@id/tilPassword" />
+
+        <!-- Password Error -->
+        <TextView
+            android:id="@+id/tvPasswordError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fitness_error"
+            android:textSize="12sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/vPasswordUnderline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Date Input Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="25dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:layout_constraintTop_toBottomOf="@id/tvPasswordError"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Date de naissance"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:textColor="@color/login_text_dark"
+                android:textColorHint="@color/login_text_medium"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Date underline -->
+        <View
+            android:id="@+id/vDateUnderline"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:background="@color/login_text_medium"
+            app:layout_constraintTop_toBottomOf="@id/tilDate"
+            app:layout_constraintStart_toStartOf="@id/tilDate"
+            app:layout_constraintEnd_toEndOf="@id/tilDate" />
+
+        <!-- Date Error -->
+        <TextView
+            android:id="@+id/tvDateError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fitness_error"
+            android:textSize="12sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/vDateUnderline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Login Link -->
+        <LinearLayout
+            android:id="@+id/llLoginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDateError"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:textColor="@color/login_text_medium"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvLoginLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textColor="@color/login_accent_green"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Creative Sign Up Button -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSignupButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/login_button_green"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toBottomOf="@id/llLoginLink"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignup"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Sign Up"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@android:color/transparent"
+                android:elevation="0dp"
+                app:backgroundTint="@android:color/transparent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:indeterminateTint="@color/login_button_green"
+            app:layout_constraintTop_toTopOf="@id/cvSignupButton"
+            app:layout_constraintBottom_toBottomOf="@id/cvSignupButton"
+            app:layout_constraintStart_toStartOf="@id/cvSignupButton"
+            app:layout_constraintEnd_toEndOf="@id/cvSignupButton" />
+
+        <!-- Decorative elements at bottom -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/cvSignupButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="@color/login_text_medium"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="@color/login_accent_green"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="@color/login_text_medium"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="@color/login_text_medium" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
