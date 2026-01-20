@@ -8,18 +8,9 @@ HealthFit est une application mobile Android complète dédiée au fitness et à
 
 ### 🔐 Authentification Sécurisée
 - Inscription utilisateur avec validation complète
-- Connexion avec email/mot de passe
 - Stockage sécurisé du token JWT
 - Persistance de session
 - Déconnexion sécurisée
-
-### 📱 Interface Utilisateur Moderne
-- Thème fitness moderne (orange/noir)
-- Design responsive avec Material Design
-- Validation en temps réel des formulaires
-- Messages d'erreur personnalisés
-- Loading states et animations fluides
-- Interface intuitive et ergonomique
 
 ### 🏋️ Fonctionnalités Fitness
 - Programmes d'entraînement personnalisés
@@ -84,13 +75,6 @@ cd backend
 # Synchroniser Gradle et lancer l'application
 ```
 
-## 📖 Documentation Complète
-
-- **[Guide de Démarrage](GUIDE_DEMARRAGE.md)** - Démarrage rapide
-- **[Configuration](CONFIGURATION.md)** - Configuration détaillée
-- **[Architecture](ARCHITECTURE.md)** - Architecture technique
-- **[Tests Manuels](TESTS_MANUELS.md)** - Plan de tests
-- **[Backend Setup](backend/SETUP_GUIDE.md)** - Configuration backend
 
 ## 🛠️ Technologies Utilisées
 
@@ -111,69 +95,3 @@ cd backend
 - Ollama AI Integration
 - Maven
 
-## 📊 Statistiques du Projet
-
-- **Lignes de code**: ~2000+
-- **Fichiers Kotlin**: 15+
-- **Activités Android**: 4
-- **ViewModels**: 2
-- **API Endpoints**: 10+
-- **Documentation**: 6 fichiers détaillés
-
-## 🎨 Design et UX
-
-### Palette de Couleurs
-- **Primary**: #FF6B35 (Orange énergique)
-- **Accent**: #FFA726 (Orange clair)
-- **Background**: #1A1A1A (Noir profond)
-- **Surface**: #2D2D2D (Gris foncé)
-
-### Principes UX
-- Interface intuitive et moderne
-- Validation en temps réel
-- Feedback visuel immédiat
-- Navigation fluide
-- Accessibilité optimisée
-
-## 🔐 Sécurité
-
-- Authentification JWT robuste
-- Validation côté client et serveur
-- Stockage sécurisé des données sensibles
-- Protection contre les attaques communes
-- Chiffrement des communications
-
-## 🚀 Déploiement
-
-### Développement
-- Backend: `http://localhost:8089`
-- Frontend: Émulateur Android ou appareil physique
-
-### Production
-- Configuration HTTPS
-- Base de données sécurisée
-- APK signé pour distribution
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! Veuillez consulter les guidelines de contribution avant de soumettre une pull request.
-
-## 📄 Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
-## 👨‍💻 Développeur
-
-**Noureddine Raach**
-- GitHub: [@nourraach](https://github.com/nourraach)
-- LinkedIn: [Votre profil LinkedIn]
-
-## 🙏 Remerciements
-
-Merci à tous ceux qui ont contribué à ce projet et à la communauté open source pour les outils et bibliothèques utilisés.
-
----
-
-**Développé avec ❤️ pour la communauté fitness**
-
-*HealthFit - Votre coach fitness dans votre poche* 💪
